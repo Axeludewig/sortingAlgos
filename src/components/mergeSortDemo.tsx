@@ -52,10 +52,18 @@ const MergeSortDemo = () => {
 					>
 						Reset
 					</button>
+
 					{sortedArr.length > 0 && (
-						<p className="border-2 mt-4 border-green-500 font-semibold">
-							Sorted array: {sortedArr.join(", ")}
-						</p>
+						<div>
+							<div className="border-2 mt-4 border-green-500">
+								<p className="font-semibold">
+									Sorted array:{" "}
+									<span className="text-green-500">
+										{sortedArr.join(", ")}
+									</span>
+								</p>
+							</div>
+						</div>
 					)}
 				</form>
 			</div>

@@ -48,16 +48,18 @@ function BubbleSortDemo() {
 					</button>
 				</form>
 			</div>
-			<div>
-				<div className="border-2 mt-4 border-green-500">
-					<p className="font-semibold">
-						Output:{" "}
-						<span className="text-green-500">
-							{output.join(", ")}
-						</span>
-					</p>
+			{output.length > 0 && (
+				<div>
+					<div className="border-2 mt-4 border-green-500">
+						<p className="font-semibold">
+							Sorted array:{" "}
+							<span className="text-green-500">
+								{output.join(", ")}
+							</span>
+						</p>
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }

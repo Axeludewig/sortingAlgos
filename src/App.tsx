@@ -41,8 +41,12 @@ function App() {
 				<button onClick={() => setCount(0)}>Reset count</button>
 			</div>
 			<div className="md:flex justify-center items-center flex-col gap-4">
-				<BubbleSortDemo />
-				<MergeSortDemo />
+				<div className="mb-4">
+					<BubbleSortDemo />
+				</div>
+				<div className="mb-4">
+					<MergeSortDemo />
+				</div>
 			</div>
 		</div>
 	);
