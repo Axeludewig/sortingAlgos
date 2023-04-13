@@ -18,36 +18,46 @@ const MergeSortDemo = () => {
 		setSortedArr([]);
 	};
 
+	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+		const arr = inputArr.split(",").map((s) => Number(s.trim()));
+		console.log("Unsorted array:", arr);
+		const sortedArray = merge_sort([...arr]);
+		console.log("Sorted array:", sortedArray);
+	}
+
 	return (
 		<div className="flex flex-col justify-center border-2 p-8 border-violet-400">
 			<div className="flex-col justify-center">
-				<h1 className="m-4">Merge Sort!</h1>
-				<label>
-					<span className="text-2xl">Input:&nbsp;</span>
-					<input
-						type="text"
-						value={inputArr}
-						onChange={(e) => setInputArr(e.target.value)}
-						className="border-2 border-slate-600 rounded-full  hover:border-violet-800 p-4 focus:ring-violet-800  focus:border-violet-800 focus:ring-1 focus:outline-none"
-					/>
-				</label>
-				<button
-					onClick={handleSort}
-					className="font-semibold border-2 border-violet-400 hover:ring-violet-500 m-4"
-				>
-					Sort
-				</button>
-				<button
-					onClick={handleReset}
-					className="font-semibold border-2 border-violet-400 hover:ring-violet-500 m-4"
-				>
-					Reset
-				</button>
-				{sortedArr.length > 0 && (
-					<p className="border-2 mt-4 border-green-500 font-semibold">
-						Sorted array: {sortedArr.join(", ")}
-					</p>
-				)}
+				<form onSubmit={handleSubmit}>
+					<h1 className="m-4">Merge Sort!</h1>
+					<label>
+						<span className="text-2xl">Input:&nbsp;</span>
+						<input
+							type="text"
+							value={inputArr}
+							onChange={(e) => setInputArr(e.target.value)}
+							className="border-2 border-slate-600 rounded-full  hover:border-violet-800 p-4 focus:ring-violet-800  focus:border-violet-800 focus:ring-1 focus:outline-none"
+						/>
+					</label>
+					<button
+						onClick={handleSort}
+						className="font-semibold border-2 border-violet-400 hover:ring-violet-500 m-4"
+					>
+						Sort
+					</button>
+					<button
+						onClick={handleReset}
+						className="font-semibold border-2 border-violet-400 hover:ring-violet-500 m-4"
+					>
+						Reset
+					</button>
+					{sortedArr.length > 0 && (
+						<p className="border-2 mt-4 border-green-500 font-semibold">
+							Sorted array: {sortedArr.join(", ")}
+						</p>
+					)}
+				</form>
 			</div>
 		</div>
 	);
