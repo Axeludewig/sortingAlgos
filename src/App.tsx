@@ -4,6 +4,12 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import BubbleSortDemo from "./components/bubbleSortDemo";
 import MergeSortDemo from "./components/mergeSortDemo";
+import Quicksort from "./components/quickSortDemo";
+import QuickSortDemo from "./components/quickSortDemo";
+import SelectionSortDemo from "./components/selectionSortDemo";
+import InsertionSortDemo from "./components/insertionSortDemo";
+import HeapSortDemo from "./components/heapSortDemo";
+import RadixSortDemo from "./components/radixSortDemo";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -46,6 +52,21 @@ function App() {
 				</div>
 				<div className="mb-4">
 					<MergeSortDemo />
+				</div>
+				<div className="mb-4">
+					<QuickSortDemo />
+				</div>
+				<div className="mb-4">
+					<SelectionSortDemo />
+				</div>
+				<div className="mb-4">
+					<InsertionSortDemo />
+				</div>
+				<div className="mb-4">
+					<HeapSortDemo />
+				</div>
+				<div className="mb-4">
+					<RadixSortDemo />
 				</div>
 			</div>
 		</div>

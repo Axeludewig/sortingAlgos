@@ -1,0 +1,11 @@
+You've already covered a great set of sorting algorithms! However, there are a few more sorting algorithms that could be useful to showcase on your website. Here are a few suggestions:
+
+Shell sort: Shell sort is an extension of insertion sort that uses a series of incrementally decreasing gaps to sort the elements. It has a better worst-case time complexity than insertion sort.
+
+Counting sort: Counting sort is an algorithm that sorts elements by counting the number of occurrences of each element and using that information to determine the position of each element in the sorted sequence. It is particularly useful for sorting integers in a limited range.
+
+Bucket sort: Bucket sort is a sorting algorithm that divides the input into a set of buckets and then sorts each bucket individually. It is particularly useful for sorting elements that are uniformly distributed over a range.
+
+Tim sort: Tim sort is a sorting algorithm that combines elements of both merge sort and insertion sort. It is particularly useful for sorting elements that have a partially ordered structure.
+
+By showcasing these additional sorting algorithms, you can provide a more comprehensive overview of different sorting techniques, and users can better understand which sorting algorithm is best suited for a particular use case.
